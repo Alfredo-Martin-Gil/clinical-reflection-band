@@ -42,9 +42,8 @@ This is a **design and reasoning artifact**, not a product, not a proof of conce
 
 ## Concept Overview
 
-The conceptual core of this repository is documented in:
-
-docs/reflection_band_minimal_concept.md
+The conceptual core of this repository is documented in  
+**docs/reflection_band_minimal_concept.md**, which serves as the **single normative conceptual reference** for this repository.
 
 That document elaborates the reasoning behind the concept, including:
 
