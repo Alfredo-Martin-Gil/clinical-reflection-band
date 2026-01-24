@@ -1,4 +1,16 @@
 # Clinical Reflection Band
+## Context
+
+A clinician is already acting under pressure.
+
+A working hypothesis is in place. A plan is moving forward.  
+Information is incomplete, time is scarce, and reversibility is narrowing.
+
+In that moment, the problem is not accuracy or optimization.  
+It is **cognitive interruption** — missing the single contradiction, mismatch, or inflection point that would be hardest to live with afterward.
+
+This repository exists to explore how AI can **remain silent by default**, and speak only when silence is no longer safe.
+
 
 This repository explores a **minimal, non-intrusive interface concept** for using AI in high-urgency clinical environments.
 
