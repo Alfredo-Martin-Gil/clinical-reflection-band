@@ -44,4 +44,55 @@ This is a **design and reasoning artifact**, not a product, not a proof of conce
 
 The conceptual core of this repository is documented in:
 
+docs/reflection_band_minimal_concept.md
 
+That document elaborates the reasoning behind the concept, including:
+
+- cognitive support framing under clinical uncertainty,  
+- the silence-as-default interaction model,  
+- minimal interface logic and signaling thresholds,  
+- and a reflection mode based on:
+  - contradiction checks,
+  - pattern mismatch detection,
+  - and regret minimization under time pressure.
+
+This document is a **thinking artifact**, not a specification for implementation.
+
+---
+
+## What This Repository Is
+
+- A **thinking artifact** for clinical AI, workflow design, and governance.
+- A concrete way to reason about how adaptive intelligence can support clinicians **without replacing or directing them**.
+- A shared reference point for discussion among clinicians, workflow architects, and AI practitioners.
+
+---
+
+## What This Repository Is Not
+
+This repository is **not**:
+
+- a diagnostic system,
+- a clinical decision support system,
+- a triage engine,
+- a deployable product,
+- a hardware design,
+- or a proof of concept.
+
+No claims are made regarding performance, safety, validation, or deployment.
+
+---
+
+## Scope and Intent
+
+The intent is to remain **deliberately minimal and restrained**.
+
+If this repository ever stops being legible as a **support-for-judgment artifact** and starts to resemble automation, prescription, or optimization, it has failed its purpose.
+
+---
+
+## Status
+
+Conceptual artifact — v0.1  
+No implementation implied.  
+No roadmap inferred.
