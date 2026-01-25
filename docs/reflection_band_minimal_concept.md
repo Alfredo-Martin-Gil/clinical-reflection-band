@@ -8,6 +8,8 @@ Traditional AI systems often introduce friction because they require structured 
 
 This concept aims to support clinicians **without competing with judgment**, by offering minimal, non-intrusive intelligence signals only at critical inflection points.
 
+It does not attempt to optimize decisions.
+
 ---
 
 ## 2) Design Principles
@@ -29,7 +31,7 @@ This concept aims to support clinicians **without competing with judgment**, by 
 ## 3) Proposed Interface
 
 ### Form factor
-- Dedicated wristband-style device (conceptual only).
+- Dedicated wristband-style device (conceptual only — interface metaphor, not a wearable product).
 
 ### Primary signal (color-based)
 - 🟢 **Green** — stability / silence  
@@ -54,10 +56,11 @@ The system operates in a **reflection mode** focused on surface checks, not reco
    If the outcome were poor despite appropriate care, what is the most likely thing a clinician would wish they had paused to verify?
 
 ### Constraints
-- Do not generate diagnoses.
-- Do not expand differentials unless explicitly prompted.
-- Do not suggest management unless a clear contradiction exists.
-- Keep responses concise and clinically grounded.
+- Do not generate diagnoses.  
+- Do not expand differentials unless explicitly prompted.  
+- Do not suggest management unless a clear contradiction exists.  
+- Keep responses concise and clinically grounded.  
+- Do not rank options.
 
 ---
 
@@ -85,6 +88,6 @@ The objective is not prediction, but to surface only those signals that still fa
 
 ## 7) Status
 
-This document is a **thinking artifact**.  
+This document is a **thinking / design artifact**.  
 No implementation is implied.  
 No deployment assumptions are made.
