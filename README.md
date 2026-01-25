@@ -4,25 +4,24 @@
 
 A clinician is already acting under pressure.
 
-A working hypothesis is in place. A plan is moving forward.  
+A working hypothesis is in place. A plan is moving forward.
 Information is incomplete, time is scarce, and reversibility is narrowing.
 
-In that moment, the problem is not accuracy or optimization.  
-It is **cognitive interruption** — missing the single contradiction, mismatch, or inflection point that would be hardest to live with afterward.
+In that moment, the problem is not accuracy or optimization.
+It is cognitive interruption — missing the single contradiction, mismatch, or inflection point that would be hardest to live with afterward.
+This repository exists to explore how AI can remain silent by default, and speak only when silence is no longer safe.
 
-This repository exists to explore how AI can **remain silent by default**, and speak only when silence is no longer safe.
+* * *
 
----
+This repository explores a minimal, non-intrusive interaction pattern for using AI in high-urgency clinical environments.
 
-This repository explores a **minimal, non-intrusive interface concept** for using AI in high-urgency clinical environments.
-
-The focus is **not** automation, diagnosis, or decision-making, but **cognitive support under uncertainty** — where silence, timing, and restraint matter more than recommendations.
-
+The focus is not automation, diagnosis, or decision-making, but cognitive support under uncertainty — where silence, timing, and restraint matter more than recommendations.
 The concept is grounded in real-world emergency and prehospital clinical practice, and in workflow-oriented AI design thinking.
 
-This is a **design and reasoning artifact**, not a product, not a proof of concept, and not a clinical system.
+This is a conceptual artifact, not software, not a product, and not a clinical system.
+The focus is on cognitive framing, not on model capabilities.
 
----
+* * *
 
 ## Core Principles
 
@@ -38,38 +37,42 @@ This is a **design and reasoning artifact**, not a product, not a proof of conce
 - **Human authority preserved**  
   All responsibility, liability, and final decision-making remain entirely with the clinician.
 
----
+- **No workflow ownership**  
+  The system never becomes the owner of any clinical process.
+
+* * *
 
 ## Concept Overview
 
-The conceptual core of this repository is documented in  
-**docs/reflection_band_minimal_concept.md**, which serves as the **single normative conceptual reference** for this repository.
+The conceptual core of this repository is documented in:
 
-That document elaborates the reasoning behind the concept, including:
+docs/reflection_band_minimal_concept.md  
+docs/three_layer_mapping.md
 
-- cognitive support framing under clinical uncertainty,  
-- the silence-as-default interaction model,  
-- minimal interface logic and signaling thresholds,  
+That document set elaborates the reasoning behind the concept, including:
+- cognitive support framing under clinical uncertainty,
+- the silence-as-default interaction model,
+- minimal interface logic and signaling thresholds,
 - and a reflection mode based on:
   - contradiction checks,
   - pattern mismatch detection,
   - and regret minimization under time pressure.
 
-This document is a **thinking artifact**, not a specification for implementation.
+This document is a thinking / design artifact, not a specification for implementation.
 
----
+* * *
 
 ## What This Repository Is
 
-- A **thinking artifact** for clinical AI, workflow design, and governance.
-- A concrete way to reason about how adaptive intelligence can support clinicians **without replacing or directing them**.
+- A thinking artifact for clinical AI, workflow design, and governance.
+- A concrete way to reason about how adaptive intelligence can support clinicians without replacing or directing them.
 - A shared reference point for discussion among clinicians, workflow architects, and AI practitioners.
 
----
+* * *
 
 ## What This Repository Is Not
 
-This repository is **not**:
+This repository is not:
 
 - a diagnostic system,
 - a clinical decision support system,
@@ -80,18 +83,30 @@ This repository is **not**:
 
 No claims are made regarding performance, safety, validation, or deployment.
 
----
+* * *
 
 ## Scope and Intent
 
-The intent is to remain **deliberately minimal and restrained**.
+The intent is to remain deliberately minimal and restrained.
 
-If this repository ever stops being legible as a **support-for-judgment artifact** and starts to resemble automation, prescription, or optimization, it has failed its purpose.
+If this repository ever stops being legible as a support-for-judgment artifact and starts to resemble automation, prescription, or optimization, it has failed its purpose.
 
----
+* * *
 
 ## Status
 
 Conceptual artifact — v0.1  
 No implementation implied.  
 No roadmap inferred.
+
+## About
+
+Minimal, non-intrusive interface concept for AI-supported clinical reflection under uncertainty.
+
+### Resources
+
+Readme
+
+### License
+
+MIT license
