@@ -2,7 +2,7 @@
 
 This document maps the Reflection Band concept to a three-layer model commonly used in workflow and safety-critical system design.
 
-The intent is not to define a system, but to make explicit where each design element operates — and where it must not leak.
+The intent is not to define a system, but to make explicit where each design element operates — and where it must not leak into implementation or decision authority.
 
 ---
 
@@ -24,7 +24,7 @@ This layer exists to **preserve attention**, not to demand it.
 
 What the system infers or prioritizes internally.
 
-- Pattern aggregation across available signals.
+- Lightweight pattern aggregation across available signals.
 - Detection of contradictions with the current working plan.
 - Identification of classic high-risk pattern mismatches.
 - Regret-oriented reflection: “what would be hardest to miss later?”
@@ -54,5 +54,6 @@ If any element of the design:
 - competes with clinical judgment,
 - forces interaction under time pressure,
 - or shifts responsibility away from the clinician,
+- claims clinical effectiveness,
 
 then the system has crossed its intended boundary and failed its purpose.
