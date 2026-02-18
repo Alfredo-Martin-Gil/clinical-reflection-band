@@ -1,112 +1,80 @@
 # Clinical Reflection Band
 
-## Context
+## Overview
 
-A clinician is already acting under pressure.
+Clinical AI is often designed to optimize, predict, or recommend.
 
-A working hypothesis is in place. A plan is moving forward.
-Information is incomplete, time is scarce, and reversibility is narrowing.
+This repository explores a different discipline.
 
-In that moment, the problem is not accuracy or optimization.
-It is cognitive interruption — missing the single contradiction, mismatch, or inflection point that would be hardest to live with afterward.
-This repository exists to explore how AI can remain silent by default, and speak only when silence is no longer safe.
+The Reflection Band is a minimal conceptual framework for designing AI interaction in high-stakes environments where irreversibility narrows under uncertainty.
 
-* * *
+Its focus is not performance.
 
-This repository explores a minimal, non-intrusive interaction pattern for using AI in high-urgency clinical environments.
+Its focus is authority.
 
-The focus is not automation, diagnosis, or decision-making, but cognitive support under uncertainty — where silence, timing, and restraint matter more than recommendations.
-The concept is grounded in real-world emergency and prehospital clinical practice, and in workflow-oriented AI design thinking.
+---
 
-This is a conceptual artifact, not software, not a product, and not a clinical system.
-The focus is on cognitive framing, not on model capabilities.
+## Core Position
 
-* * *
+Silence is default.
 
-## Core Principles
+A signal appears only when continued silence would conceal a meaningful tension inside the clinician’s current working frame.
 
-- **Silence as default**  
-  Absence of alerts is an active signal of reassurance, not lack of support.
+The artifact does not:
 
-- **Non-competitive support**  
-  The system must never compete with, override, or constrain clinical judgment.
+- recommend actions,
+- resolve ambiguity,
+- assign probability,
+- rank options,
+- validate decisions,
+- or prevent harm.
 
-- **Minimal intervention**  
-  Signals appear only at rare inflection points where uncertainty is high and reversibility is still plausible.
+It surfaces tensions. Nothing more.
 
-- **Human authority preserved**  
-  All responsibility, liability, and final decision-making remain entirely with the clinician.
+---
 
-- **No workflow ownership**  
-  The system never becomes the owner of any clinical process.
+## The Boundary
 
-* * *
+The Reflection Band is not:
 
-## Concept Overview
-
-The conceptual core of this repository is documented in:
-
-docs/reflection_band_minimal_concept.md  
-docs/three_layer_mapping.md
-
-That document set elaborates the reasoning behind the concept, including:
-- cognitive support framing under clinical uncertainty,
-- the silence-as-default interaction model,
-- minimal interface logic and signaling thresholds,
-- and a reflection mode based on:
-  - contradiction checks,
-  - pattern mismatch detection,
-  - and regret minimization under time pressure.
-
-This document is a thinking / design artifact, not a specification for implementation.
-
-* * *
-
-## What This Repository Is
-
-- A thinking artifact for clinical AI, workflow design, and governance.
-- A concrete way to reason about how adaptive intelligence can support clinicians without replacing or directing them.
-- A shared reference point for discussion among clinicians, workflow architects, and AI practitioners.
-
-* * *
-
-## What This Repository Is Not
-
-This repository is not:
-
-- a diagnostic system,
 - a clinical decision support system,
+- a predictive model,
 - a triage engine,
-- a deployable product,
-- a hardware design,
-- or a proof of concept.
+- a wearable device concept,
+- or a deployable product.
 
-No claims are made regarding performance, safety, validation, or deployment.
+It is a boundary discipline for adaptive intelligence in irreversible contexts.
 
-* * *
+If it becomes useful in the conventional sense — by optimizing, predicting, protecting, or guiding — it has drifted.
 
-## Scope and Intent
+---
 
-The intent is to remain deliberately minimal and restrained.
+## What It Preserves
 
-If this repository ever stops being legible as a support-for-judgment artifact and starts to resemble automation, prescription, or optimization, it has failed its purpose.
+- Ambiguity where ambiguity exists.
+- Silence where silence is appropriate.
+- Decisional ownership without dilution.
 
-* * *
+Human authority is non-transferable.
+
+---
+
+## What It Refuses
+
+The artifact deliberately refuses:
+
+- optimization framing,
+- predictive framing,
+- safety-claim framing,
+- workflow ownership,
+- authority migration.
+
+These refusals are structural, not cosmetic.
+
+---
 
 ## Status
 
-Conceptual artifact — v0.1  
+Conceptual discipline — v0.1  
 No implementation implied.  
 No roadmap inferred.
-
-## About
-
-Minimal, non-intrusive interface concept for AI-supported clinical reflection under uncertainty.
-
-### Resources
-
-Readme
-
-### License
-
-MIT license
