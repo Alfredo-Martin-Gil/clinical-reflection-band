@@ -1,59 +1,70 @@
-# Reflection Band — Three-Layer Mapping
+# Three-Layer Mapping
 
-This document maps the Reflection Band concept to a three-layer model commonly used in workflow and safety-critical system design.
+This document describes the structural boundaries of the Reflection Band concept.
 
-The intent is not to define a system, but to make explicit where each design element operates — and where it must not leak into implementation or decision authority.
-
----
-
-## Layer 1 — Interface / Interaction
-
-What the clinician perceives in real time.
-
-- Dedicated, single-purpose interface (wristband-style).
-- Color-based signaling as the primary channel.
-- Silence (steady green) as the default state.
-- Visual signals appear only at clinically meaningful inflection points.
-- No mandatory interaction, data entry, or acknowledgment required.
-
-This layer exists to **preserve attention**, not to demand it.
+The model separates interaction, interpretation, and authority into distinct layers to prevent implicit migration of responsibility.
 
 ---
 
-## Layer 2 — Intelligence / Interpretation
+## Layer 1 — Interaction
 
-What the system infers or prioritizes internally.
+Layer 1 concerns the visible signal.
 
-- Lightweight pattern aggregation across available signals.
-- Detection of contradictions with the current working plan.
-- Identification of classic high-risk pattern mismatches.
-- Regret-oriented reflection: “what would be hardest to miss later?”
-- Conservative thresholds focused on reversibility, not prediction.
+It is intentionally minimal:
+- single-channel,
+- rare,
+- non-directive,
+- non-explanatory by default.
 
-This layer is intentionally restrained and **does not generate decisions**.
+Silence is default.
 
----
-
-## Layer 3 — Authority / Responsibility
-
-Who decides, and who remains accountable.
-
-- All clinical judgment remains with the human clinician.
-- The system cannot block, enforce, or override actions.
-- Alerts acknowledge risk but do not prescribe behavior.
-- Acceptance of trade-offs is explicitly human.
-- Responsibility, liability, and authorship stay entirely outside the system.
-
-This layer is **non-negotiable**.
+A signal indicates the possible presence of a meaningful tension within the clinician’s current frame. It does not rank options, recommend actions, or validate decisions.
 
 ---
 
-## Boundary Conditions
+## Layer 2 — Interpretation
 
-If any element of the design:
-- competes with clinical judgment,
-- forces interaction under time pressure,
-- or shifts responsibility away from the clinician,
-- claims clinical effectiveness,
+Layer 2 exists entirely within the clinician.
 
-then the system has crossed its intended boundary and failed its purpose.
+The artifact does not interpret for the clinician.  
+It does not explain.  
+It does not resolve ambiguity.
+
+The clinician may choose to re-examine:
+- assumptions,
+- internal contradictions,
+- plan–data mismatches,
+- narrowing reversibility under uncertainty.
+
+Interpretation remains human.
+
+---
+
+## Layer 3 — Authority
+
+Layer 3 is non-transferable.
+
+Responsibility, liability, and decisional ownership remain entirely with the clinician.
+
+The artifact must not:
+- introduce preference language,
+- imply correctness,
+- imply safety,
+- imply prevention,
+- or create upward vigilance migration.
+
+If authority shifts — even subtly — Layer 3 leakage has occurred and the concept has failed.
+
+---
+
+## Integrity constraint
+
+The system must preserve:
+
+- ambiguity where ambiguity exists,
+- silence where silence is appropriate,
+- and decisional ownership without dilution.
+
+If the artifact begins to optimize, predict, rank, recommend, or protect, it has crossed the boundary from reflective discipline into assistive system.
+
+That boundary is not negotiable.
