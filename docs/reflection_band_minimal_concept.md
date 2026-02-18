@@ -1,93 +1,93 @@
-# Reflection Band — Minimal Concept v0.1
+# Reflection Band — Minimal Concept
 
-## 1) Problem Statement
+## Intent
 
-In high-urgency clinical environments, the primary challenge is not the lack of information, but **cognitive interruption**.
+This document describes a minimal interaction discipline for AI in high-urgency clinical settings.
 
-Traditional AI systems often introduce friction because they require structured input or interactive engagement at moments when clinicians have no available cognitive bandwidth.
+The goal is not to advise, optimize, or protect.  
+The goal is to preserve clinical judgment under uncertainty by surfacing tensions a clinician may choose to re-check before irreversibility narrows.
 
-This concept aims to support clinicians **without competing with judgment**, by offering minimal, non-intrusive intelligence signals only at critical inflection points.
-
-It does not attempt to optimize decisions.
-
----
-
-## 2) Design Principles
-
-- **Silence as default**  
-  Reassurance comes from the absence of interruption.
-
-- **Non-competitive support**  
-  The system must never override, constrain, or compete with clinical judgment.
-
-- **Minimal intervention**  
-  Intervene only when uncertainty is high and reversibility is still plausible.
-
-- **Authority remains human**  
-  Responsibility and accountability remain with the clinician at all times.
+This is a conceptual artifact. No implementation is implied.
 
 ---
 
-## 3) Proposed Interface
+## Core idea
 
-### Form factor
-- Dedicated wristband-style device (conceptual only — interface metaphor, not a wearable product).
-
-### Primary signal (color-based)
-- 🟢 **Green** — stability / silence  
-- 🟡 **Yellow** — possible imminent complication (>75% estimated risk)  
-- 🔴 **Red** — critical contradiction with high risk  
-
-Signals appear only when a clinically significant inflection point is detected.
+Silence is default.  
+A signal appears only when continued silence would conceal a meaningful contradiction or tension within the clinician’s current working frame.
 
 ---
 
-## 4) Reflection Mode — Minimal Rules
+## Design principles
 
-The system operates in a **reflection mode** focused on surface checks, not recommendations.
-
-1. **Contradiction check**  
-   Is there any single feature (symptom, vital sign, lab, or context) that would make the current plan unsafe?
-
-2. **Pattern mismatch**  
-   Is there a classic high-risk pattern that does not fully fit the working hypothesis and is commonly overlooked under time pressure?
-
-3. **Regret test**  
-   If the outcome were poor despite appropriate care, what is the most likely thing a clinician would wish they had paused to verify?
-
-### Constraints
-- Do not generate diagnoses.  
-- Do not expand differentials unless explicitly prompted.  
-- Do not suggest management unless a clear contradiction exists.  
-- Keep responses concise and clinically grounded.  
-- Do not rank options.
+- Silence is epistemically neutral. It is not reassurance.
+- The artifact surfaces tensions; it does not catch errors.
+- No authority gradient is created.
+- No preference language is permitted.
+- Signals are rare, brief, and non-directive.
 
 ---
 
-## 5) What This Is Not
+## Interaction model
 
-This concept is not:
-- a diagnostic system,
-- a traditional clinical decision support tool,
-- a workflow automation engine,
-- a personal wearable outside institutional context.
+The “band” is a metaphor for a single-channel reflective signal.
 
-It is a **cognitive support artifact** designed to reduce noise while preserving human authority.
+There are no risk scores, no thresholds, no probability language, no color-coded alerts, and no ranked options.
 
----
+A signal means:
 
-## 6) Minimal Reference Scenario
+“There may be a tension worth re-checking before reversibility narrows.”
 
-### Acute myocardial infarction — first hour
+It does not mean:
 
-Even when evidence-based care is delivered correctly, early AMI evolution is often chaotic.
-
-The objective is not prediction, but to surface only those signals that still fall within **reversible bounds** during the first hour.
+“You are safe.”  
+“You are wrong.”  
+“Do X.”
 
 ---
 
-## 7) Status
+## Conceptual trigger conditions
 
-This document is a **thinking / design artifact**.  
-No implementation is implied.  
-No deployment assumptions are made.
+A signal is conceptually permitted only when:
+
+- a contradiction emerges within the working hypothesis,
+- an assumption becomes unstable,
+- or an inflection point approaches while uncertainty remains unresolved.
+
+These describe cognitive framing conditions, not computational modules.
+
+---
+
+## Refusal clause
+
+This artifact deliberately refuses:
+
+- predictive framing,
+- optimization framing,
+- safety-claim framing,
+- workflow ownership,
+- authority migration.
+
+If any of these emerge, the concept has drifted.
+
+---
+
+## Boundary condition
+
+If the artifact can reasonably be paraphrased as:
+
+“It prevents mistakes” or “It protects the patient,”
+
+then authority leakage has occurred.
+
+The only acceptable paraphrase is:
+
+“It surfaces tensions I may want to re-check — and I remain fully responsible.”
+
+---
+
+## Status
+
+Minimal concept v0.1  
+No implementation implied.  
+No roadmap inferred.
