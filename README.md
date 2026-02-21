@@ -1,5 +1,21 @@
 # Clinical Reflection Band
 
+## What this is (in practical terms)
+
+The Reflection Band is a minimal conceptual framework for designing AI interaction in high-stakes clinical environments.
+
+Instead of optimizing decisions or providing recommendations, it focuses on how AI can interact with clinicians without overriding human judgment under pressure.
+
+This repository explores how to:
+
+– Surface critical tensions without resolving them  
+– Preserve decisional ownership in uncertain conditions  
+– Avoid premature closure in time-critical environments  
+
+This is not a model or a product.
+
+It is a way of thinking about how AI should behave when decisions are irreversible and information is incomplete.
+
 ## Overview
 
 Clinical AI is often designed to optimize, predict, or recommend.
