@@ -1,96 +1,105 @@
 # Clinical Reflection Band
 
-## What this is (in practical terms)
+A minimal thinking artifact for stabilizing clinical perception under uncertainty.
 
-The Reflection Band is a minimal conceptual framework for designing AI interaction in high-stakes clinical environments.
+The Reflection Band explores how a system might **surface epistemic tensions without directing clinical decisions**.
 
-Instead of optimizing decisions or providing recommendations, it focuses on how AI can interact with clinicians without overriding human judgment under pressure.
+It does not diagnose, recommend, optimize, or guide treatment.
 
-This repository explores how to:
-
-– Surface critical tensions without resolving them  
-– Preserve decisional ownership in uncertain conditions  
-– Avoid premature closure in time-critical environments  
-
-This is not a model or a product.
-
-It is a way of thinking about how AI should behave when decisions are irreversible and information is incomplete.
-
-## Overview
-
-Clinical AI is often designed to optimize, predict, or recommend.
-
-This repository explores a different discipline.
-
-The Reflection Band is a minimal conceptual framework for designing AI interaction in high-stakes environments where irreversibility narrows under uncertainty.
-
-Its focus is not performance.
-
-Its focus is authority.
+Its role is limited to clarifying the **state of the clinical frame** when cognitive load and uncertainty are high.
 
 ---
 
-## Core Position
+## Core idea
 
-Silence is default.
+In high-pressure environments, clinicians often experience moments where:
 
-A signal appears only when continued silence would conceal a meaningful tension inside the clinician’s current working frame.
+- the available data appears stable
+- but the situation does not fully cohere
 
-The artifact does not:
+These moments are usually handled through intuition and internal re-check loops.
 
-- recommend actions,
-- resolve ambiguity,
-- assign probability,
-- rank options,
-- validate decisions,
-- or prevent harm.
+The Reflection Band proposes a minimal reflective layer that may surface tensions such as:
 
-It surfaces tensions. Nothing more.
+- frame mismatch
+- trajectory instability
+- coherence gaps
+- hidden-variable tension
 
----
-
-## The Boundary
-
-The Reflection Band is not:
-
-- a clinical decision support system,
-- a predictive model,
-- a triage engine,
-- a wearable device concept,
-- or a deployable product.
-
-It is a boundary discipline for adaptive intelligence in irreversible contexts.
-
-If it becomes useful in the conventional sense — by optimizing, predicting, protecting, or guiding — it has drifted.
+The artifact **describes the state of the frame**, never the direction of the decision.
 
 ---
 
-## What It Preserves
+## What this is not
 
-- Ambiguity where ambiguity exists.
-- Silence where silence is appropriate.
-- Decisional ownership without dilution.
+The Reflection Band is **not** a clinical decision support system.
 
-Human authority is non-transferable.
+It does not:
+
+- suggest diagnoses
+- recommend treatments
+- optimize care pathways
+- replace clinical reasoning
+
+All clinical authority remains with the clinician.
+
+The artifact operates only at the level of **epistemic reflection**.
 
 ---
 
-## What It Refuses
+## Conceptual layers
 
-The artifact deliberately refuses:
+The framework follows a three-layer model:
 
-- optimization framing,
-- predictive framing,
-- safety-claim framing,
-- workflow ownership,
-- authority migration.
+Layer 1 — Interaction  
+How signals appear and when they appear.
 
-These refusals are structural, not cosmetic.
+Layer 2 — Interpretation  
+Surfacing structural tensions in the clinical frame.
+
+Layer 3 — Authority  
+Clinical judgment and responsibility.
+
+The Reflection Band is intentionally restricted to **Layer 2**.
+
+---
+
+## Suggested reading path
+
+If you are new to the repository, start here:
+
+1. `docs/reflection_band_minimal_concept.md`
+2. `docs/three_layer_mapping.md`
+3. `docs/boundary_discipline.md`
+4. `docs/tension_taxonomy.md`
+5. `docs/signal_eligibility.md`
+
+Then explore contextual and analytical notes:
+
+- `docs/prehospital_state_constraint.md`
+- `docs/first_hour_emergency_context.md`
+- `docs/reflection_vs_decision_support.md`
+- `docs/failure_modes_extended.md`
+
+---
+
+## Context
+
+The Reflection Band concept is particularly relevant in environments characterized by:
+
+- high cognitive load
+- incomplete information
+- rapidly evolving physiology
+- irreversible decisions under time pressure
+
+Emergency medicine and prehospital care are typical examples.
 
 ---
 
 ## Status
 
-Conceptual discipline — v0.1  
-No implementation implied.  
-No roadmap inferred.
+Conceptual artifact.
+
+No implementation, model, or deployment is implied.
+
+The repository exists to explore the boundaries of reflective cognitive support in clinical environments.
