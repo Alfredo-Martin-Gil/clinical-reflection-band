@@ -1,6 +1,7 @@
 # Clinical Reflection Band
 
-![Reflection Band Prototype](assets/reflection_band_prototype.png)
+<img width="2790" height="1504" alt="Band GitHub" src="https://github.com/user-attachments/assets/bcaf210c-2491-4ba3-8348-b11ce823b0c2" />
+
 
 *A conceptual wearable artifact designed to surface epistemic tensions in clinical reasoning without influencing clinical authority.*
 
