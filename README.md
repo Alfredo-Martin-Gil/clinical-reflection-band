@@ -1,165 +1,96 @@
-# Clinical Reflection Band
+# Clinical Reflection Band (CRB)
 
 <img width="2790" height="1504" alt="Band GitHub" src="https://github.com/user-attachments/assets/bcaf210c-2491-4ba3-8348-b11ce823b0c2" />
 
 
-*A conceptual wearable artifact designed to surface epistemic tensions in clinical reasoning without influencing clinical authority.*
+## A Layer-2 Cognitive Infrastructure for Monitoring Clinical Frame Stability
+
+> **"Failure in high-stakes medicine rarely stems from a lack of knowledge; it stems from the silent destabilization of the clinical frame."**
 
 ---
 
-## Overview
+## 1. Executive Summary
+The **Clinical Reflection Band (CRB)** is not a diagnostic tool, but a hardware-agnostic **Reflection Layer (Layer-2)**. It is designed for high-pressure environments (Emergency Medicine, SVA, ICU) where clinicians must maintain situational awareness under extreme cognitive load.
 
-The **Clinical Reflection Band** explores a minimal form of cognitive support for clinicians working under uncertainty.
-
-Instead of recommending diagnoses or treatments, the artifact surfaces **structural tensions in the current clinical frame** when the observed state does not fully organize into a coherent interpretation.
-
-The device does **not guide decisions**.
-
-It reflects the **state of the clinical frame**.
+Unlike traditional AI that attempts to predict outcomes or classify diseases, the CRB monitors the **coherence** between the clinician's mental model (the "Frame") and the evolving physiological reality of the patient.
 
 ---
 
-## Core Idea
+## 2. Clinical Genesis: The "Why"
+This project emerges from two decades of frontline experience in emergency and prehospital medicine. In practice, there is a recurring, dangerous phenomenon: **The Case Drift.**
 
-In high-pressure clinical environments, clinicians frequently encounter situations where:
+* The initial diagnosis remains plausible.
+* The data has not yet reached catastrophic thresholds.
+* The workflow continues as planned.
+* **Yet, the situation is no longer cohering.**
 
-- the available data appears stable
-- but the situation does not fully cohere
-- internal re-evaluation loops emerge
-
-These moments represent **epistemic tension** rather than diagnostic certainty.
-
-The Reflection Band proposes a minimal reflective layer capable of surfacing signals such as:
-
-- frame mismatch  
-- trajectory instability  
-- coherence gaps  
-- hidden variable tension  
-
-These signals **describe the state of the frame**, not the direction of the decision.
+Current AI systems (Layer-1) focus on the data. Clinicians (Layer-3) focus on the decision. The **Clinical Reflection Band** occupies the missing middle: it surfaces **epistemic tension**—the exact moment when the active clinical frame begins to lose its grip on reality.
 
 ---
 
-## Example Reflection Signal
+## 3. The Layered Architecture
 
-A possible message displayed by the artifact might look like:
-FRAME UNDER STRAIN
+To ensure safety and professional autonomy, the system adheres to a strict tri-layer model:
 
-RESPIRATORY PATTERN
-PARTIALLY EXPLAINED
-
-TRAJECTORY UNSTABLE
-
-
-The signal:
-
-- does **not name diagnoses**
-- does **not suggest treatment**
-- does **not issue alerts**
-
-It simply indicates that the **current frame does not fully organize the observed state**.
+* **Layer 1 — Interaction:** The interface (wearable, EHR indicator, or haptic cue) that delivers the signal.
+* **Layer 2 — Reflection (The Core):** The logic engine that computes the divergence between the *Expected Trajectory* and the *Observed Reality*.
+* **Layer 3 — Clinical Authority:** The human clinician. The system never suggests a diagnosis; it only signals that a **reassessment is advised**.
 
 ---
 
-## What This Is Not
+## 4. Frame Initialization & Multi-Modal Inference
+A reflection system must know what the clinician is thinking to detect a mismatch. The CRB utilizes **Ambient Clinical Intelligence (ACI)** to identify the active frame without manual input:
 
-The Reflection Band is **not a Clinical Decision Support System (CDSS)**.
-
-It does not:
-
-- suggest diagnoses
-- recommend treatments
-- optimize care pathways
-- replace clinical reasoning
-- override clinical authority
-
-All medical responsibility remains with the clinician.
-
-The artifact operates only at the level of **epistemic reflection**.
+* **Ambient Conversational Analysis:** Real-time processing of clinical dialogue and verbal orders to capture intent (e.g., *"Suspected Sepsis, start fluid bolus"*).
+* **Implicit Action Inference:** Deducing the frame from CPOE (Computerized Physician Order Entry) and medication administration.
+* **NLP Triage Integration:** Basing the initial hypothesis on handoff reports and triage notes.
 
 ---
 
-## Conceptual Architecture
+## 5. Technical Logic: The Strain Index ($\sigma$)
 
-The framework follows a three-layer structure.
+The system treats clinical stability as a mathematical divergence problem. It calculates a **Strain Index ($\sigma$)** by comparing two state spaces:
 
-**Layer 1 — Interaction**
+1.  **Expected Trajectory ($S_{expected}$):** The probabilistic path of a patient under the current frame and treatment.
+2.  **Observed Trajectory ($S_{observed}$):** Real-time high-frequency data (EKG, SpO2, and critically, **ETCO2** trends).
 
-How reflective signals appear and when they appear.
+$$\sigma = \int_{t-\Delta t}^{t} D(S_{expected}, S_{observed}) \,dt$$
 
-**Layer 2 — Interpretation**
-
-Detection and surfacing of structural tensions in the clinical frame.
-
-**Layer 3 — Authority**
-
-Clinical reasoning, decisions, and responsibility.
-
-The Reflection Band is intentionally restricted to **Layer 2**.
+When $\sigma$ exceeds a clinical threshold, the system triggers a **Frame Under Strain** signal, prompting a "STOP & THINK" moment before the patient's condition collapses.
 
 ---
 
-## When Reflection Appears
-
-The artifact follows strict signal discipline.
-
-A reflective signal appears only when three conditions are satisfied:
-
-1. **State integrity**  
-   The observed state is sufficiently coherent.
-
-2. **Structural tension**  
-   A meaningful epistemic tension exists within the frame.
-
-3. **Perceptual relevance**  
-   The signal carries enough weight to stabilize attention rather than compete with it.
-
-If these conditions are not met, the system remains **silent**.
+## 6. Data Infrastructure Requirements
+To achieve implementation in real-world environments like mobile ICUs or EDs, the CRB integrates:
+* **Physiological Streams:** High-frequency time-series and waveform analysis.
+* **Intervention Streams:** Real-time timestamps of drug delivery and procedural milestones.
+* **Acoustic Context:** Diarized audio for capturing the "thought-to-action" clinical pipeline.
 
 ---
 
-## Context
-
-The concept is particularly relevant in environments characterized by:
-
-- incomplete information
-- rapidly evolving physiology
-- high cognitive load
-- limited diagnostic resources
-- irreversible decisions under time pressure
-
-Emergency medicine and prehospital care are typical examples.
-
-In these environments, the challenge is often not identifying possible diagnoses but **maintaining a stable perceptual frame under pressure**.
+## 7. Metrics of Success
+We do not measure "accuracy" in the traditional sense. We measure **Clinical Safety**:
+* **Time to Frame Reassessment (TFR):** The reduction in time between silent destabilization and the pivot to a new clinical strategy.
+* **Signal Relevance Rate (SRR):** Ensuring high specificity to prevent alarm fatigue.
+* **Cognitive Transparency:** The ability of the system to provide "why" (the diverging variable) during the reassessment phase.
 
 ---
 
-## Suggested Reading Path
-
-If you are new to the repository, start here:
-
-1. `docs/reflection_band_minimal_concept.md`
-2. `docs/three_layer_mapping.md`
-3. `docs/boundary_discipline.md`
-4. `docs/tension_taxonomy.md`
-5. `docs/signal_eligibility.md`
-
-Then explore contextual notes:
-
-- `docs/prehospital_state_constraint.md`
-- `docs/first_hour_emergency_context.md`
-- `docs/why_emergency_medicine.md`
-- `docs/reflection_vs_decision_support.md`
-
-For conceptual limitations:
-
-- `docs/failure_modes_extended.md`
+## 8. Design Principles
+1.  **Authority Remains Human:** Reflection is not recommendation.
+2.  **Boundary Discipline:** The system identifies *instability*, but never dictates *certainty*.
+3.  **Minimalist Friction:** Subtlety in signaling is a requirement for high-acuity environments.
 
 ---
 
-## Status
+## Repository Structure
+* `README.md`: The core manifesto.
+* `docs/clinical_philosophy.md`: Deep dive into the 20-year experience and cases.
+* `docs/architecture_logic.md`: Technical breakdown of the divergence engine.
+* `docs/ambient_voice_processing.md`: Specifications for conversational inference.
 
-Conceptual artifact.
+---
 
-The repository explores the boundaries of reflective cognitive support in clinical environments.  
-No implementation, model, or deployment is implied.
+### Current Status
+**Conceptual Artifact & Logic Framework.**
+This repository defines a new class of "Safety-Net AI" for clinicians who operate at the edge of stability. It is a call to move beyond "AI as an Oracle" toward **"AI as a Mirror."**
