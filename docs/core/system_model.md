@@ -2,206 +2,284 @@
 
 ## Purpose
 
-The Clinical Reflection Band (CRB) is designed as a **Layer-2 reflective system** that monitors the stability of the clinician’s working mental model (“clinical frame”) during patient care.
+The **Clinical Reflection Band (CRB)** is a conceptual **reflective AI architecture** designed to monitor the stability of the clinician’s active interpretive frame during patient care.
 
-The system does not generate diagnoses or treatment recommendations.
+The system does not generate diagnoses, treatment recommendations, or automated management decisions.
 
-Its function is limited to detecting **structural instability between the current clinical frame and evolving patient data**.
+Its function is limited to detecting **loss of coherence between the clinical frame currently guiding care and the patient’s evolving physiological trajectory**.
 
-When such instability appears, the system may emit a **minimal reflective signal**.
-
----
-
-# System Architecture
-
-The CRB model can be understood as a multi-layer reflective architecture.
-
-Layer-1 represents the **clinical workflow itself**, while Layer-2 monitors the coherence of the reasoning frame guiding that workflow.
-
-Clinical Environment (Layer-1)
-↓
-Patient data streams
-↓
-Frame Construction
-↓
-Frame Stability Monitoring (Layer-2)
-↓
-Reflection Gate
-↓
-Minimal Reflective Signal or Silence
-
+When such loss of coherence becomes meaningful under acceptable signal conditions, the CRB may emit a **minimal reflective signal**.
 
 ---
 
-# Layer-1: Clinical Environment
+# Core Concept
 
-Layer-1 corresponds to the real clinical workflow.
+The CRB is based on a simple premise:
 
-Examples include:
+> a case can remain clinically plausible while the frame guiding interpretation progressively loses coherence with the patient’s observed physiological evolution.
 
-- Emergency departments
-- Prehospital emergency medicine
-- Critical care
-- Acute hospital wards
+This condition is referred to as **Case Drift**.
 
-At this level clinicians:
+The system is therefore not designed to answer:
 
-- collect patient data
-- construct hypotheses
-- make decisions
-- execute treatment plans
+- What is the diagnosis?
+- What treatment should be given?
+- What action is recommended next?
 
-The CRB does not interfere with this layer.
+It is designed to ask a different question:
+
+- Is the current interpretive frame still coherently explaining the case?
 
 ---
 
-# Input Streams
+# What the System Monitors
 
-The reflective layer may observe multiple categories of signals:
+The CRB does not monitor deterioration in the ordinary sense.
 
-### Physiological signals
+It monitors **epistemic tension**.
+
+That means it evaluates the divergence between:
+
+1. the **expected physiological trajectory** implied by the inferred active clinical frame, and
+2. the **observed physiological trajectory** of the patient.
+
+This distinction matters.
+
+A patient may deteriorate without epistemic tension if the deterioration is expected under the current frame.
+
+Conversely, epistemic tension may rise before overt deterioration becomes obvious if observed evolution is no longer matching what the active frame would predict.
+
+---
+
+# Architectural Interpretation
+
+The CRB can be understood through two complementary architectural descriptions.
+
+## A. Boundary Architecture — Three Layers
+
+### Layer 1 — Interaction
+
+This layer defines how a reflective signal reaches the clinician.
+
+Possible formats include:
+
+- wearable haptic cue
+- ambient visual marker
+- EHR-integrated neutral indicator
+
+The signal must remain minimal and non-directive.
+
+### Layer 2 — Reflection
+
+This is the core reflective layer.
+
+It:
+
+- infers the active clinical frame
+- generates expected trajectory models conditioned on that frame
+- compares expected and observed physiological evolution
+- computes epistemic tension
+- determines whether a reflective signal is warranted
+
+### Layer 3 — Clinical Authority
+
+The clinician remains the sole decision authority.
+
+The CRB never:
+
+- issues diagnostic statements
+- proposes treatments
+- blocks workflow
+- overrides decisions
+
+---
+
+## B. Operational Architecture — Five Stages
+
+### Stage 1 — Multimodal Data Acquisition
+
+The reflective layer observes signals already generated during care, such as:
+
 - vital signs
 - monitoring trends
 - laboratory updates
+- documentation
+- order-entry activity
+- intervention patterns
+- spoken reasoning when available
 
-### Clinical narrative signals
-- clinician speech
-- structured documentation
-- clinical reasoning statements
+### Stage 2 — Probabilistic Frame Inference
 
-### Workflow signals
-- repeated reassessment
-- order patterns
-- intervention escalation
+The system infers the active clinical frame **F** from multimodal contextual evidence.
 
-The CRB does not need full semantic interpretation of these streams; it monitors **coherence patterns and deviations**.
+The objective is not certainty, but an operational estimate of the frame currently structuring care.
+
+### Stage 3 — Expected Trajectory Generation
+
+Given inferred frame **F**, the system generates the **expected physiological trajectory**:
+
+**S_exp(F)**
+
+This represents the trajectory that would be coherent with the current frame if the frame remained valid.
+
+### Stage 4 — Divergence Monitoring
+
+The system continuously compares:
+
+- **S_exp(F)** = expected physiological trajectory under the active frame
+- **S_obs** = observed physiological trajectory
+
+This comparison is weighted by time, context, and signal quality.
+
+### Stage 5 — Reflective Signal Emission
+
+If divergence exceeds calibrated thresholds and workflow inertia persists, the system may emit a **minimal reflective signal**.
+
+The default state remains **silence**.
 
 ---
 
-# Frame Construction
+# Formal Model
 
-A **clinical frame** is the implicit working model guiding the clinician’s interpretation of the case.
+## Conceptual Variables
 
-It includes:
-
-- working diagnosis
-- expected physiological trajectory
-- treatment strategy
-- anticipated response patterns
-
-Frames are dynamic but tend to remain stable until sufficient contradiction emerges.
-
-CRB monitors the **internal consistency between frame expectations and incoming signals**.
+- **F** = inferred active clinical frame
+- **S_exp(F,t)** = expected physiological trajectory at time **t**, conditioned on frame **F**
+- **S_obs(t)** = observed physiological trajectory at time **t**
+- **D(·)** = divergence function between expected and observed trajectories
+- **q(t)** = signal-quality factor
+- **\lambda(t)** = temporal weighting factor
+- **\Delta t** = observation window
 
 ---
 
-# Frame Stability Monitoring
+## Epistemic Tension Index
 
-The reflective layer continuously evaluates whether the current data remains compatible with the active clinical frame.
+The central quantity in the CRB architecture is the **Epistemic Tension Index (σ)**.
 
-Indicators of instability may include:
+A simplified conceptual formulation is:
 
-- trend divergence
-- contradictory signals
-- unexplained physiological drift
-- repeated reinterpretation of the same data
+$$
+\sigma(t) = \int_{t-\Delta t}^{t} q(\tau)\,\lambda(\tau)\,D\big(S_{exp}(F,\tau),\,S_{obs}(\tau)\big)\,d\tau
+$$
 
-The system does not attempt to determine the correct diagnosis.
+This formulation encodes a critical conceptual boundary:
 
-It evaluates only **frame coherence**.
+> **σ does not measure physiological deterioration itself.  
+> σ measures divergence between the physiological trajectory expected under the active clinical frame and the trajectory actually observed.**
+
+This is what makes the variable **epistemic** rather than merely physiological.
+
+---
+
+# Practical Interpretation of σ
+
+A low **σ** suggests that observed evolution remains broadly coherent with the active frame.
+
+A rising **σ** suggests that the frame may be losing explanatory power.
+
+A high **σ** does not mean that the system knows the correct diagnosis.
+
+It means that the **current frame may no longer be adequately explaining the patient’s evolution**.
+
+The role of the signal is therefore to support **reassessment**, not substitution of judgment.
 
 ---
 
 # Reflection Gate
 
-To prevent alert fatigue, signals pass through a **reflection gate**.
+Because reflective signaling can itself become harmful if overused, every candidate signal passes through a **reflection gate**.
 
-The gate applies strict constraints:
+The gate suppresses signals when:
 
-- no signal if instability is minor
-- no signal if instability is already obvious
-- no signal if clinician action already reflects awareness
+- divergence is minimal
+- data quality is poor
+- the mismatch is already obvious
+- the team is already adapting the frame
+- the expected benefit of signaling is low
 
-Signals are emitted only when:
+The gate allows signaling only when:
 
-- frame instability is rising
-- but the clinical workflow remains unchanged
-
----
-
-# Reflective Signal
-
-When the reflection gate activates, the system produces a **minimal signal**.
-
-The signal must:
-
-- avoid diagnostic language
-- avoid recommendations
-- avoid interruptive alarms
-
-Possible formats include:
-
-- subtle wearable vibration
-- visual symbol
-- short neutral message
-
-Example:
-
-Frame instability detected
-
-The purpose is to trigger **re-evaluation**, not to provide answers.
+- epistemic tension is rising
+- workflow remains organized around the original frame
+- the mismatch has not yet been meaningfully integrated into ongoing reasoning
+- signal timing is likely to be useful rather than disruptive
 
 ---
 
-# Silence as Default
+# Signal Properties
 
-Silence is a central design principle.
+A CRB signal must be:
 
-Most of the time the system should remain silent.
+- minimal
+- non-diagnostic
+- non-recommendatory
+- non-interruptive
+- rare
 
-Frequent signaling would undermine the reflective purpose and generate alert fatigue.
+Examples:
+
+- subtle haptic pulse
+- neutral visual marker
+- short non-directive phrase
+
+Examples of acceptable signal language:
+
+- **FRAME UNDER EPISTEMIC TENSION**
+- **COHERENCE GAP DETECTED**
+- **TRAJECTORY-FRAME DIVERGENCE RISING**
+
+Examples of unacceptable signal language:
+
+- **Consider pulmonary embolism**
+- **Escalate treatment now**
+- **Sepsis likely**
+
+The system must never cross from reflection into recommendation.
 
 ---
 
-# Authority Boundary
+# Why the Model Is Not Traditional Decision Support
 
-The clinician retains full authority.
+Traditional Clinical Decision Support Systems (CDSS) attempt to improve clinical direction by suggesting diagnoses, treatments, or actions.
 
-The CRB:
+The CRB operates in a different space.
 
-- does not override decisions
-- does not block actions
-- does not recommend treatments
+It does not optimize decisions directly.
 
-It functions only as a **reflective mirror for reasoning stability**.
+It monitors the **stability of the perceptual and interpretive structure from which decisions are being made**.
+
+Its target is not the decision itself.
+
+Its target is the **coherence of the frame underlying the decision**.
 
 ---
 
-# Design Principles
+# Success Conditions
 
-The CRB architecture follows five core principles:
+The CRB should not be judged primarily by conventional predictive accuracy metrics.
 
-1. **Non-intrusion**  
-The system must not disrupt clinical workflow.
+Relevant evaluation targets include:
 
-2. **Authority preservation**  
-Clinical responsibility always remains with the physician.
+- earlier frame reassessment
+- meaningful signal relevance
+- low false-positive burden
+- preservation of workflow compatibility
+- post hoc cognitive transparency
 
-3. **Minimal signaling**  
-Signals must be rare and lightweight.
-
-4. **Interpretation neutrality**  
-The system should not impose diagnostic narratives.
-
-5. **Cognitive compatibility**  
-Signals must integrate naturally into high-pressure environments.
+The architecture succeeds if it helps teams recognize **frame instability earlier** without adding significant cognitive burden.
 
 ---
 
 # Conceptual Status
 
-This system model represents a **conceptual architecture**.
+This system model represents a **research-stage conceptual architecture**.
 
-It is intended as a starting point for discussion, research, and exploration of reflective AI infrastructures in healthcare.
+It is intended to support:
 
-No implementation is currently provided in this repository.
+- theoretical clarification
+- research discussion
+- architecture design
+- future validation planning
+
+It is **not** an implementation, a deployable device, or a validated clinical system.
