@@ -9,6 +9,12 @@ to surface structural tensions in the current clinical frame when those tensions
 
 These tensions exist entirely in Layer 2 (interpretation) and must never resolve into direction or preference.
 
+Within this taxonomy, the specific target of the **Clinical Reflection Band (CRB)** is **epistemic tension**:
+the divergence between the physiological trajectory expected under the clinician’s active interpretive frame and the trajectory actually observed.
+
+The taxonomy below describes the forms that such epistemic tension may take at the signal level.
+It does not mean that the CRB is trying to detect every kind of clinical instability.
+
 ---
 
 ## Why a taxonomy is necessary
@@ -41,13 +47,13 @@ No action is implied.
 ### 2. Trajectory instability
 
 Definition  
-The current state appears stable but the trajectory shows emerging instability.
+The current state appears stable but the trajectory shows emerging instability relative to what would be expected under the active frame.
 
 Example signal  
 Surface stable. Trajectory instability detected.
 
 Interpretation  
-The present snapshot is coherent, but short-term evolution may not be.
+The present snapshot is coherent, but short-term evolution may no longer match the trajectory implied by the current frame.
 
 No direction is suggested.
 
@@ -96,6 +102,24 @@ The current data structure cannot yet resolve the situation into a stable interp
 
 ---
 
+## Boundary clarification
+
+These classes describe **signal-language forms of epistemic tension**.
+
+They are not separate operating targets competing with the core model.
+
+The CRB does not attempt to:
+
+- detect physiological deterioration in general
+- resolve diagnostic uncertainty
+- recommend diagnosis or treatment
+- replace clinician judgment
+
+Its function remains narrower:
+to surface when the current interpretive frame may be losing coherence with the patient’s observed evolution.
+
+---
+
 ## Signal discipline
 
 Any tension signal must respect four rules:
@@ -129,4 +153,4 @@ This taxonomy defines the structural vocabulary of the Reflection Band.
 
 It is not a detection model, algorithm, or implementation.
 
-It simply clarifies the types of epistemic tension the artifact may surface without leaking into clinical authority.
+It clarifies the forms of epistemic tension the artifact may surface without leaking into clinical authority.
