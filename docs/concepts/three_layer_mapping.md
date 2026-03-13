@@ -24,17 +24,22 @@ A signal indicates the possible presence of a meaningful tension within the clin
 
 ## Layer 2 — Interpretation
 
-Layer 2 exists entirely within the clinician.
+Layer 2 concerns the clinician’s interpretive space.
+
+This is the layer in which the clinician’s active frame either remains coherent or begins to lose coherence with the patient’s evolving physiological reality.
 
 The artifact does not interpret for the clinician.  
 It does not explain.  
 It does not resolve ambiguity.
 
-The clinician may choose to re-examine:
+What it may do is surface a minimal reflective cue when epistemic tension becomes structurally meaningful.
+
+The clinician may then choose to re-examine:
 - assumptions,
 - internal contradictions,
 - plan–data mismatches,
-- narrowing reversibility under uncertainty.
+- narrowing reversibility under uncertainty,
+- or divergence between expected and observed trajectory.
 
 Interpretation remains human.
 
@@ -63,6 +68,7 @@ The system must preserve:
 
 - ambiguity where ambiguity exists,
 - silence where silence is appropriate,
+- interpretive openness under uncertainty,
 - and decisional ownership without dilution.
 
 If the artifact begins to optimize, predict, rank, recommend, or protect, it has crossed the boundary from reflective discipline into assistive system.
