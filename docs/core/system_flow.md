@@ -2,25 +2,27 @@
 
 ## Overview
 
-This document describes the conceptual flow of the **Clinical Reflection Band (CRB)** system.
+This document describes the conceptual operating flow of the **Clinical Reflection Band (CRB)**.
 
-The CRB operates as a **Layer-2 reflective infrastructure** placed above the normal clinical workflow. Its role is not to generate diagnoses or recommendations, but to monitor **coherence between the clinician’s working frame and the evolving patient data**.
+The CRB functions as a **reflective Layer-2 infrastructure** operating alongside normal clinical workflow. Its role is not to generate diagnoses, treatment recommendations, or risk classifications, but to monitor whether the **active clinical frame** continues to remain coherent with the patient’s evolving physiological trajectory.
 
-The system remains silent by default and emits signals only when **frame instability reaches a meaningful threshold**.
+The system is designed to remain **silent by default** and emit a reflective signal only when epistemic tension becomes clinically meaningful.
 
 ---
 
-# High-Level System Flow
+# High-Level Flow
 
-The CRB architecture can be described as a monitoring pipeline.
+The CRB can be described as a five-stage reflective pipeline:
 
 Clinical Environment  
 ↓  
-Data Streams  
+Multimodal Data Acquisition  
 ↓  
-Frame Construction Model  
+Probabilistic Frame Inference  
 ↓  
-Frame Stability Monitor  
+Expected Trajectory Generation  
+↓  
+Frame-Conditioned Divergence Monitoring  
 ↓  
 Reflection Gate  
 ↓  
@@ -28,129 +30,195 @@ Reflective Signal or Silence
 
 ---
 
-# Step 1 — Clinical Environment
+# Stage 1 — Clinical Environment
 
-The process begins inside the clinical workflow itself.
+The process begins inside the real clinical workflow.
 
-Examples:
+Examples include:
 
-- emergency department
+- emergency departments
 - prehospital emergency medicine
 - intensive care units
 - acute care hospital wards
 
-Clinicians gather information, form hypotheses, and manage the case.
+Clinicians gather information, construct hypotheses, order tests, initiate treatment, and update management plans.
 
-The CRB does not interfere with this workflow.
+The CRB does not control this process.
+
+It observes it.
 
 ---
 
-# Step 2 — Data Streams
+# Stage 2 — Multimodal Data Acquisition
 
-Multiple categories of signals may feed the reflective layer.
+The reflective layer receives signals already generated during patient care.
 
-Physiological signals
+## Physiological signals
 
 - heart rate
 - blood pressure
+- respiratory rate
 - oxygen saturation
+- ETCO₂
 - monitoring trends
 
-Clinical narrative signals
+## Contextual and narrative signals
 
-- spoken reasoning
-- documentation patterns
-- hypothesis updates
+- triage notes
+- handoff documentation
+- progress notes
+- structured EHR entries
+- spoken clinical reasoning when available
 
-Workflow signals
+## Workflow and action signals
 
-- order changes
-- repeated reassessment
+- CPOE activity
+- medication choices
+- procedural actions
 - escalation patterns
+- timing and rhythm of reassessment
 
-The system observes **patterns and trajectories**, not isolated data points.
+The CRB is therefore not dependent on a single modality.
+
+It relies on the convergence of multiple weak but meaningful signals.
 
 ---
 
-# Step 3 — Frame Construction Model
+# Stage 3 — Probabilistic Frame Inference
 
-The system maintains an approximation of the **current clinical frame**.
+The system estimates the **active clinical frame** currently guiding care.
 
-A frame includes:
+A clinical frame may include:
 
-- the assumed clinical explanation
+- the assumed explanation of the case
 - expected physiological behavior
-- anticipated treatment response
-- predicted trajectory of the case
+- anticipated response to intervention
+- the logic underlying current workflow continuity
 
-The model does not attempt to determine the correct diagnosis.  
-It only attempts to infer **the structure of the working frame guiding the clinician’s decisions**.
+This frame is not entered manually.
+
+It is inferred passively from multimodal evidence such as:
+
+- language in notes
+- order-entry semantics
+- intervention patterns
+- repeated references in handoffs
+- treatment pathways already activated
+
+The output of this stage is an operational estimate of the active frame:
+
+**F**
+
+This estimate may remain probabilistic rather than fully resolved.
 
 ---
 
-# Step 4 — Frame Stability Monitor
+# Stage 4 — Expected Trajectory Generation
 
-The reflective layer continuously compares:
+Once frame **F** is estimated, the system derives the physiological trajectory that would be expected if that frame remained valid.
 
-Expected signals under the current frame
+This expected trajectory can be represented conceptually as:
 
-versus
+**S_exp(F)**
 
-Observed signals from the clinical environment.
+Examples:
 
-Indicators of instability may include:
+- if the active frame implies septic shock, certain intervention-response patterns become more plausible
+- if the active frame implies bronchospasm, different response trajectories become expected
+- if the active frame implies uncomplicated pain without systemic compromise, ongoing physiological drift may become harder to reconcile
+
+The purpose of this stage is not to create a full physiological simulator.
+
+The purpose is to establish what kind of evolution would remain coherent under the current frame.
+
+---
+
+# Stage 5 — Divergence Monitoring
+
+The reflective layer compares:
+
+- **S_exp(F)** = expected physiological trajectory under the active frame
+- **S_obs** = observed physiological trajectory
+
+This comparison is performed over time rather than as an isolated snapshot.
+
+Potential indicators of divergence include:
 
 - unexplained physiological drift
-- contradictory signals
-- repeated reinterpretation of the same data
-- deviation from expected trajectory
+- contradictory response to treatment
+- repeated local reinterpretation without frame revision
+- growing mismatch between expected and actual evolution
 
-The system evaluates **frame coherence**, not diagnostic accuracy.
+This produces a dynamic estimate of **epistemic tension**.
 
----
+Important boundary:
 
-# Step 5 — Reflection Gate
-
-To prevent alert fatigue, all potential signals pass through a strict **reflection gate**.
-
-The gate suppresses signals when:
-
-- instability is minimal
-- instability is already obvious
-- the clinician is already adapting the frame
-
-The gate allows signals only when:
-
-- frame instability is increasing
-- workflow continues under the original frame
+> the system is not asking whether the patient is deteriorating in general;  
+> it is asking whether the patient is evolving in a way that remains coherent with the frame currently organizing clinical action.
 
 ---
 
-# Step 6 — Reflective Signal
+# Stage 6 — Reflection Gate
+
+Not every divergence event should generate a signal.
+
+To prevent alert fatigue and preserve trust, all candidate signals pass through a **reflection gate**.
+
+The gate suppresses signaling when:
+
+- divergence is weak
+- data quality is poor
+- mismatch is already obvious to the clinician
+- the team has already begun adapting the frame
+- signaling would add noise rather than value
+
+The gate allows signaling only when:
+
+- epistemic tension is increasing
+- the original frame still appears to be governing workflow
+- the mismatch is not yet fully integrated into decision-making
+- the signal is likely to support reassessment without distraction
+
+---
+
+# Stage 7 — Reflective Signal
 
 If the reflection gate activates, the CRB emits a **minimal reflective signal**.
 
-Examples of signal formats:
+Possible signal formats:
 
-- subtle vibration on a wearable device
-- visual indicator
-- neutral message
+- subtle wearable vibration
+- ambient visual marker
+- neutral short message in the interface
 
-Example message:
+Examples of acceptable signal language:
 
-Frame instability detected
+- **FRAME UNDER EPISTEMIC TENSION**
+- **COHERENCE GAP DETECTED**
+- **TRAJECTORY-FRAME DIVERGENCE RISING**
 
-The signal contains **no interpretation, no diagnosis, and no recommendation**.
+The signal must contain:
+
+- no diagnosis
+- no recommendation
+- no suggested action
+- no forced interpretation
+
+Its function is to trigger **reassessment**.
 
 ---
 
 # Silence as Default Behavior
 
-The CRB is designed to remain silent most of the time.
+The CRB should remain silent most of the time.
 
-Frequent signals would degrade trust and increase cognitive burden.
+Silence is not an absence of function.
 
-The system should therefore operate as a **background reflective layer** rather than an alerting system.
+It is an intentional safety property.
+
+Frequent signaling would collapse the distinction between reflective infrastructure and ordinary alerting systems.
+
+For this reason, silence is the default operating mode.
 
 ---
 
@@ -160,16 +228,34 @@ The CRB never replaces the clinician’s authority.
 
 The system:
 
-- does not block clinical actions
+- does not block actions
 - does not enforce protocols
-- does not override decisions
+- does not assign diagnoses
+- does not suggest treatments
+- does not convert uncertainty into direction
 
-Its role is limited to **highlighting potential instability in the current reasoning frame**.
+Its role is limited to indicating that the **current frame may be losing coherence with the patient’s observed evolution**.
+
+---
+
+# Flow Summary
+
+The operating logic of the CRB can be summarized as:
+
+1. observe clinical and physiological data
+2. infer the active frame
+3. generate the trajectory expected under that frame
+4. compare expected and observed evolution
+5. estimate epistemic tension
+6. suppress or permit signaling through the reflection gate
+7. emit a minimal reflective cue only when justified
 
 ---
 
 # Conceptual Status
 
-The CRB flow described here represents a **conceptual architecture** intended for exploration and discussion.
+The flow described here represents a **conceptual research architecture**.
 
-No implementation is currently included in this repository.
+It is intended to clarify the operating logic of the CRB and align the repository with the broader reflective AI framework.
+
+No deployable implementation is currently included in this repository.
