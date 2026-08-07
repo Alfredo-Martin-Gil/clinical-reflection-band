@@ -1,6 +1,8 @@
 # Example Clinical Scenario  
 ## Emergency Department — Chest Pain Case
 
+> **Status:** hypothetical illustration. This is not a patient record, study result, model output, or evidence that the CRB can detect frame instability or change clinician behaviour.
+
 This document illustrates how the **Clinical Reflection Band (CRB)** might behave during a simulated emergency department scenario.
 
 The purpose is not to provide diagnosis or treatment guidance.  

@@ -93,20 +93,16 @@ For this reason the Reflection Band follows a strict rule:
 
 If the reflective signal cannot reduce cognitive noise, it should not appear.
 
-Silence indicates that:
-
-- the current frame remains coherent
-- no meaningful tension is detected
-- or the available state does not justify reflection
+Silence has no reassuring interpretation. In a future implementation it could reflect an ineligible signal, inadequate state capture, a missed tension, or system unavailability. It must not be read as evidence that the frame is coherent, that risk is absent, or that the patient is safe.
 
 ---
 
 ## Conceptual interpretation
 
-In the first hour of a critical emergency, the artifact acts as a minimal epistemic stabilizer.
+In the first hour of a critical emergency, the concept proposes a minimal reflective cue whose effects would require empirical evaluation.
 
 It does not attempt to solve the clinical problem.
 
-It simply helps clarify the cognitive ground from which the clinician's decision emerges.
+It is intended to invite reassessment of the cognitive ground from which the clinician's decision emerges; this benefit has not been demonstrated.
 
 This preserves authority while reducing perceptual ambiguity under pressure.
