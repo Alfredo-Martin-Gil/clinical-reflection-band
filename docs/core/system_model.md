@@ -1,5 +1,7 @@
 # System Model
 
+> **Status:** conceptual architecture only. The components, variables, equations, gates, and outputs below are proposed design objects. They are not implemented, calibrated, or validated capabilities.
+
 ## Purpose
 
 The **Clinical Reflection Band (CRB)** is a conceptual **reflective AI architecture** designed to monitor the stability of the clinician’s active interpretive frame during patient care.

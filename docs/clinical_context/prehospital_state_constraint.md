@@ -102,6 +102,8 @@ If either condition fails, silence remains the correct output.
 Not because silence is always safer in theory,
 but because unstable state should not be converted into structured reflection.
 
+This is a proposed design rule, not evidence of safety. Silence must not be interpreted as validation of the current frame, absence of risk, or reliable system performance.
+
 ---
 
 ## What this protects

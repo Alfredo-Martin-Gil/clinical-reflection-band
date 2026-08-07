@@ -1,5 +1,7 @@
 # System Flow
 
+> **Status:** proposed flow only. No stage described in this document is implemented or validated in the current repository.
+
 ## Overview
 
 This document describes the conceptual operating flow of the **Clinical Reflection Band (CRB)**.
